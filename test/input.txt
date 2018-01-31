@@ -14,7 +14,7 @@
   list
 
 ##########################################################
-# test add person command, setup state for futuer tests
+# test add person command, setup state for future tests
 ##########################################################
 
   # should catch invalid args format
@@ -40,6 +40,19 @@
   list
   add Esther Potato p/555555 e/esther@notreal.potato
   list
+
+##########################################################
+# test sort command
+##########################################################
+
+  # add persons not in alphabetical order
+  add Gretel Lim p/777777 e/gretel456@ilove.candy
+  add Freddy Man p/666666 e/fredsbreads@cool.mints
+
+  # should print all persons in order they were added
+  list
+  # should print all persons in alphabetical order
+  sort
 
 ##########################################################
 # test find persons command
